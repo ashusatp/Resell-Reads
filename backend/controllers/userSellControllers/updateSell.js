@@ -142,7 +142,7 @@ const updateSellController = {
           return next(CustomErrorHandler.cantAccessResource());
         }
   
-        book.isAvailable = false;
+        book.isAvailable =  !book.isAvailable;
   
         await book.save();
   
